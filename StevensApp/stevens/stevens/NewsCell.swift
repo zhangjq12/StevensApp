@@ -10,7 +10,12 @@ import UIKit
 
 class NewsCell: UICollectionViewCell {
 
-    @IBOutlet weak var label: UILabel!
+    lazy var label: UILabel = {
+        let label = UILabel(frame: CGRect(x: 20, y: 0, width: frame.width - 105, height: 100))
+        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
+        return label
+    }()
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var hotLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
@@ -18,7 +23,10 @@ class NewsCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
         image.downloadedFrom(imageurl: "http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg")
+        self.addSubview(label)
     }
 
 }

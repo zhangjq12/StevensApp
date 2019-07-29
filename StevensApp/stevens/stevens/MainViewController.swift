@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = .white
         
+        self.navigationController?.navigationBar.barTintColor = UIColor.red
+        
         var controllers = [UIViewController]()
         for i in 0..<5{
             let controller = FourmController()

@@ -27,16 +27,6 @@
                             <bool key="isElement" value="YES"/>
                         </accessibility>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0I-uv-vpn">
-                        <rect key="frame" x="20" y="0.0" width="278" height="80"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
-                        </accessibility>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🔥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrD-P3-1s0">
                         <rect key="frame" x="20" y="86" width="20" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -95,7 +85,6 @@
                 <outlet property="commentLabel" destination="CD6-0R-MTs" id="1vN-de-aQr"/>
                 <outlet property="hotLabel" destination="FTB-FG-nSS" id="NbZ-uX-uqf"/>
                 <outlet property="image" destination="ZP9-Aj-00q" id="wyG-YV-3ic"/>
-                <outlet property="label" destination="T0I-uv-vpn" id="EfR-Sl-BKZ"/>
                 <outlet property="likeLabel" destination="d7Z-fU-ZzE" id="oze-mc-uCy"/>
             </connections>
             <point key="canvasLocation" x="149.27536231884059" y="145.98214285714286"/>

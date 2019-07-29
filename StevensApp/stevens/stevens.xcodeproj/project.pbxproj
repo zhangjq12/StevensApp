@@ -13,7 +13,7 @@
 		98D669AD22B4C867004E3BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D669AB22B4C867004E3BA2 /* LaunchScreen.storyboard */; };
 		98D669B822B4C867004E3BA2 /* stevensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669B722B4C867004E3BA2 /* stevensTests.swift */; };
 		98D669C322B4C867004E3BA2 /* stevensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669C222B4C867004E3BA2 /* stevensUITests.swift */; };
-		98D669D322D6EFC9004E3BA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669D222D6EFC9004E3BA2 /* ViewController.swift */; };
+		98D669D322D6EFC9004E3BA2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669D222D6EFC9004E3BA2 /* MainViewController.swift */; };
 		98D669D522D6F166004E3BA2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669D422D6F166004E3BA2 /* CollectionViewController.swift */; };
 		98D669DE22DAC8C9004E3BA2 /* TLPageView+PageViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669D722DAC8C9004E3BA2 /* TLPageView+PageViewControllerDataSource.swift */; };
 		98D669DF22DAC8C9004E3BA2 /* TLMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669D822DAC8C9004E3BA2 /* TLMenuView.swift */; };
@@ -61,7 +61,7 @@
 		98D669BE22B4C867004E3BA2 /* stevensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stevensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D669C222B4C867004E3BA2 /* stevensUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stevensUITests.swift; sourceTree = "<group>"; };
 		98D669C422B4C867004E3BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98D669D222D6EFC9004E3BA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		98D669D222D6EFC9004E3BA2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		98D669D422D6F166004E3BA2 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		98D669D722DAC8C9004E3BA2 /* TLPageView+PageViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TLPageView+PageViewControllerDataSource.swift"; sourceTree = "<group>"; };
 		98D669D822DAC8C9004E3BA2 /* TLMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLMenuView.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				98D669A922B4C867004E3BA2 /* Assets.xcassets */,
 				98D669AB22B4C867004E3BA2 /* LaunchScreen.storyboard */,
 				98D669AE22B4C867004E3BA2 /* Info.plist */,
-				98D669D222D6EFC9004E3BA2 /* ViewController.swift */,
+				98D669D222D6EFC9004E3BA2 /* MainViewController.swift */,
 				98D669D422D6F166004E3BA2 /* CollectionViewController.swift */,
 				98D669E522DACDE5004E3BA2 /* FourmController.swift */,
 				98D669F022DB032F004E3BA2 /* ArticleViewController.swift */,
@@ -337,7 +337,7 @@
 				98D669DF22DAC8C9004E3BA2 /* TLMenuView.swift in Sources */,
 				98D669EC22DB009B004E3BA2 /* UIScrollView+Ext.swift in Sources */,
 				98D669E622DACDE5004E3BA2 /* FourmController.swift in Sources */,
-				98D669D322D6EFC9004E3BA2 /* ViewController.swift in Sources */,
+				98D669D322D6EFC9004E3BA2 /* MainViewController.swift in Sources */,
 				98D669F122DB0330004E3BA2 /* ArticleViewController.swift in Sources */,
 				98D669E122DAC8C9004E3BA2 /* TLPageViewConfiguration.swift in Sources */,
 				98D669E022DAC8C9004E3BA2 /* TLPageView.swift in Sources */,

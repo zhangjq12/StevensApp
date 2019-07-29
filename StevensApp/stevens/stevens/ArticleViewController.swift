@@ -52,7 +52,7 @@ class ArticleViewController: UIViewController {
         return contentView
     }()
     
-    func getLabHeigh(labelStr:String,font:UIFont,width:CGFloat,lineSpacing:CGFloat=0) -> CGFloat {
+    func getLabHeigh(labelStr:String,font:UIFont,width:CGFloat,lineSpacing:CGFloat = 0) -> CGFloat {
         let statusLabelText: NSString = labelStr as NSString
         let size = CGSize(width: width, height: 9999)
         let paraph = NSMutableParagraphStyle()
