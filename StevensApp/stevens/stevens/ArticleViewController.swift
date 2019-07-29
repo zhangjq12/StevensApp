@@ -23,12 +23,18 @@ class ArticleViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
-        let htmlString = """
-                            <html><head></head><body><h1>Hello World!</h1><img src="http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg" height="100" width="100"></img><p>Good!</p></body></html>
-                        """
+        //let htmlString = """
+                           // <html><head></head><body><h1>Hello World!</h1><img src="
+        //http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg
+        //" height="100" width="100"></img><p>Good!</p></body></html>
+                        //"""
 
-        label.attributedText = htmlString.htmlToAttributedString;
+        //label.attributedText = htmlString.htmlToAttributedString;
         
+        let contentText = "Hello! Welcome to my new page!\n<b>This is my home page!</b>\n<img>logo</img>\nI Love You All!"
+        label.frame = CGRect(x: 5, y: kNavBarHeight + 5, width: UIScreen.main.bounds.width - 10, height: getLabHeigh(labelStr: contentText, font: label.font, width: UIScreen.main.bounds.width))
+        //label.attributedText = NSMutableAttributedString(string: contentText)
+        label.attributedText = formatTransfer(labelStr: contentText)
         self.view.addSubview(label)
         self.view.addSubview(contentView)
         // Do any additional setup after loading the view.
@@ -61,6 +67,85 @@ class ArticleViewController: UIViewController {
         let strSize = statusLabelText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         return strSize.height
         
+    }
+    func formatTransfer(labelStr: String) -> NSAttributedString {
+        let attrStr: NSMutableAttributedString = NSMutableAttributedString()
+        var imageStr: String = ""
+        var specialStr: String = ""
+        var attrStrPart: String = ""
+        var originStr: String = ""
+        var special: Bool = false
+        var img: Bool = false
+        var attrBoo: Bool = false
+        //var startIndex: Int = 0
+        for index in 0..<labelStr.count {
+            let Index = labelStr.index(labelStr.startIndex, offsetBy: index)
+            if labelStr[Index] == "<" {
+                if originStr != "" {
+                    attrStr.append(NSMutableAttributedString(string: originStr))
+                    originStr = ""
+                }
+                special = true
+            }
+            else
+                if labelStr[Index] == ">" {
+                    special = false
+                    switch specialStr {
+                    case "img":
+                        img = true
+                        break
+                    case "/img":
+                        let image : UIImage = UIImage(named: imageStr)!
+                        let textAttachment : NSTextAttachment = NSTextAttachment()
+                        textAttachment.image = image
+                        if image.size.width < label.frame.width {
+                            textAttachment.bounds = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+                        }
+                        else {
+                            textAttachment.bounds = CGRect(x: 0, y: 0, width: label.frame.width, height: image.size.height/image.size.width*label.frame.width)
+                        }
+                        attrStr.append(NSAttributedString(attachment: textAttachment))
+                        imageStr = ""
+                        img = false
+                        break
+                    case "b":
+                        attrBoo = true
+                        break
+                    case "/b":
+                        let attr = NSMutableAttributedString(string: attrStrPart)
+                        attr.addAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)], range: NSRange(location: 0, length: attr.length))
+                        attrStr.append(attr)
+                        attrStrPart = ""
+                        attrBoo = false
+                        break
+                    default:
+                        break
+                    }
+                    specialStr = ""
+            }
+            else {
+                if special {
+                    specialStr.append(labelStr[Index])
+                }
+                else
+                    if img {
+                        imageStr.append(labelStr[Index])
+                }
+                else
+                    if attrBoo {
+                        attrStrPart.append(labelStr[Index])
+                    }
+                    else {
+                        originStr.append(labelStr[Index])
+                }
+            }
+        }
+        if originStr != "" {
+            attrStr.append(NSMutableAttributedString(string: originStr))
+            originStr = ""
+        }
+        
+        return attrStr
     }
 
 }
