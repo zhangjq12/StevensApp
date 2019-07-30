@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		988A321422F0429100959DA3 /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321322F0429100959DA3 /* ReplyCell.swift */; };
 		988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */; };
+		988A321822F065A700959DA3 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321722F065A700959DA3 /* MyInfoView.swift */; };
 		98D669A322B4C866004E3BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669A222B4C866004E3BA2 /* AppDelegate.swift */; };
 		98D669A822B4C866004E3BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D669A622B4C866004E3BA2 /* Main.storyboard */; };
 		98D669AA22B4C867004E3BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D669A922B4C867004E3BA2 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		988A321322F0429100959DA3 /* ReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
 		988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderCell.swift; sourceTree = "<group>"; };
+		988A321722F065A700959DA3 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
 		98D6699F22B4C866004E3BA2 /* stevens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stevens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D669A222B4C866004E3BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D669A722B4C866004E3BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				98D669D622DAC8C9004E3BA2 /* TLPageView */,
 				98D669A222B4C866004E3BA2 /* AppDelegate.swift */,
 				98D669A622B4C866004E3BA2 /* Main.storyboard */,
+				988A321722F065A700959DA3 /* MyInfoView.swift */,
 				98D669A922B4C867004E3BA2 /* Assets.xcassets */,
 				98D669AB22B4C867004E3BA2 /* LaunchScreen.storyboard */,
 				98D669AE22B4C867004E3BA2 /* Info.plist */,
@@ -338,6 +341,7 @@
 				98D669D522D6F166004E3BA2 /* CollectionViewController.swift in Sources */,
 				98D669ED22DB009B004E3BA2 /* RefreshFooterTool.swift in Sources */,
 				98D669E222DAC8C9004E3BA2 /* TLMenuLabel.swift in Sources */,
+				988A321822F065A700959DA3 /* MyInfoView.swift in Sources */,
 				98D669F422DB126E004E3BA2 /* NewsCell.swift in Sources */,
 				98D669E322DAC8C9004E3BA2 /* TLPageViewOption.swift in Sources */,
 				988A321422F0429100959DA3 /* ReplyCell.swift in Sources */,

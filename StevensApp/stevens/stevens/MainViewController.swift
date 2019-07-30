@@ -45,9 +45,13 @@ class ViewController: UIViewController {
                                                                               .rightItem(rightItem)])
         //        pageView.currentIndex = 1
         view.addSubview(pageView)
-        pageView.frame = CGRect(x: 0, y: 88, width: view.frame.size.width, height: view.frame.size.height - 88)
-        
-        pageView.moveTo(index: 0, animated: false)
+        if(UIDevice.current.isX()) {
+            pageView.frame = CGRect(x: 0, y: 88, width: view.frame.size.width, height: view.frame.size.height - 88)
+        }
+        else {
+            pageView.frame = CGRect(x: 0, y: 65, width: view.frame.size.width, height: view.frame.size.height - 65)
+        }
+        pageView.moveTo(index: 0, animated: true)
 
     }
     
@@ -59,6 +63,22 @@ class ViewController: UIViewController {
         //
         //        pageView.replace(viewController: vc, at: 1)
         pageView.moveTo(index: 2, animated: true)
+    }
+    
+}
+
+extension UIDevice {
+    
+    public func isX() -> Bool {
+        
+        if UIScreen.main.bounds.height == 812 {
+            
+            return true
+            
+        }
+        
+        return false
+        
     }
     
 }
