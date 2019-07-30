@@ -124,13 +124,18 @@ extension FourmController: UICollectionViewDataSource, UICollectionViewDelegate 
         return self.data.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 0.0)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCell
         
         //cell.backgroundColor = UIColor.randomColor
         let str = "No." + data[indexPath.row] + " News is: GOOD MORNING EVERY ONE, THIS IS NO." + data[indexPath.row] + " NEWS, and I'd like you to click it"
-        let strRec = str.boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 105, height: 100000), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)], context: nil)
+        let strRec = str.boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 105, height: 100000), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: cell.label.font], context: nil)
         let height = strRec.height
         cell.label.text = str
         cell.label.frame = CGRect(x: 20, y: 20, width: UIScreen.main.bounds.width - 105, height: height)

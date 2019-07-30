@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		988A321422F0429100959DA3 /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321322F0429100959DA3 /* ReplyCell.swift */; };
+		988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */; };
 		98D669A322B4C866004E3BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D669A222B4C866004E3BA2 /* AppDelegate.swift */; };
 		98D669A822B4C866004E3BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D669A622B4C866004E3BA2 /* Main.storyboard */; };
 		98D669AA22B4C867004E3BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D669A922B4C867004E3BA2 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		988A321322F0429100959DA3 /* ReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
+		988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderCell.swift; sourceTree = "<group>"; };
 		98D6699F22B4C866004E3BA2 /* stevens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stevens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D669A222B4C866004E3BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D669A722B4C866004E3BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,7 +143,9 @@
 				98D669D422D6F166004E3BA2 /* CollectionViewController.swift */,
 				98D669E522DACDE5004E3BA2 /* FourmController.swift */,
 				98D669F022DB032F004E3BA2 /* ArticleViewController.swift */,
+				988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */,
 				98D669F222DB126E004E3BA2 /* NewsCell.swift */,
+				988A321322F0429100959DA3 /* ReplyCell.swift */,
 				98D669F322DB126E004E3BA2 /* NewsCell.xib */,
 			);
 			path = stevens;
@@ -334,10 +340,12 @@
 				98D669E222DAC8C9004E3BA2 /* TLMenuLabel.swift in Sources */,
 				98D669F422DB126E004E3BA2 /* NewsCell.swift in Sources */,
 				98D669E322DAC8C9004E3BA2 /* TLPageViewOption.swift in Sources */,
+				988A321422F0429100959DA3 /* ReplyCell.swift in Sources */,
 				98D669DF22DAC8C9004E3BA2 /* TLMenuView.swift in Sources */,
 				98D669EC22DB009B004E3BA2 /* UIScrollView+Ext.swift in Sources */,
 				98D669E622DACDE5004E3BA2 /* FourmController.swift in Sources */,
 				98D669D322D6EFC9004E3BA2 /* MainViewController.swift in Sources */,
+				988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */,
 				98D669F122DB0330004E3BA2 /* ArticleViewController.swift in Sources */,
 				98D669E122DAC8C9004E3BA2 /* TLPageViewConfiguration.swift in Sources */,
 				98D669E022DAC8C9004E3BA2 /* TLPageView.swift in Sources */,
