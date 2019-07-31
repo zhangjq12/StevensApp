@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ArticleViewController.viewDidLoad():ArticleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "isXHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ArticleViewController.formatTransfer(labelStr:):ArticleViewController.swift">
       </ContextState>
    </ContextStates>

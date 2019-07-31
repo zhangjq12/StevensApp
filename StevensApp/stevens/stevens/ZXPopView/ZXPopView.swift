@@ -58,6 +58,17 @@ class ZXPopView: UIView {
         }, completion: nil)
     }
     
+    func showInWindow(){
+        
+        
+        UIApplication.shared.keyWindow?.addSubview(self)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.alpha = 1.0
+            self.contenView?.bounds.origin.y = self.bounds.height-(self.contenView?.bounds.height)!
+        }, completion: nil)
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

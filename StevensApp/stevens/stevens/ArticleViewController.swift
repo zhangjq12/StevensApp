@@ -30,12 +30,28 @@ class ArticleViewController: UIViewController {
         return scroll
     }()
     
+    let popview = ZXPopView.init(frame: UIScreen.main.bounds)
+
+    let isXHeight = UIDevice.current.isX() ? 34 : 0
+    
     let content = "很棒"
     var data: [String] = ["很棒"]
     //var countReply = 0.0;
     var textHeight = CGFloat(0)
     
     var ToolBar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: kHeight - 40, width: kWidth, height: 40))
+    var HiddenToolBar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: kHeight - 40, width: kWidth, height: 40))
+    
+    let likeBtnView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let likeBtn: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let shareBtnView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let shareBtn: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    let textView = UIView(frame: CGRect(x: 0, y: 0, width: kWidth - 70, height: 30))
+    lazy var textField: UITextField = {
+        let tf = UITextField(frame: CGRect(x: 5, y: 0, width: kWidth - 85, height: 30))
+        tf.delegate = self
+        return tf
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +59,28 @@ class ArticleViewController: UIViewController {
         for i in 1..<10 {
             data.append(data[i - 1] + content)
         }
+        ToolBar.frame.origin.y = kHeight - 40 - CGFloat(isXHeight)
+        HiddenToolBar.frame.origin.y = kHeight - CGFloat(isXHeight)
+        HiddenToolBar.frame.size.height = CGFloat(isXHeight)
+        popview.contenView = UIView.init(frame: CGRect(x: 0, y: kHeight - 100, width: kWidth, height:100 ))
+        popview.contenView?.backgroundColor = UIColor.orange
         
         self.view.backgroundColor = .white
+        likeBtn.setImage(UIImage(named: "like"), for: UIControl.State.normal)
+        shareBtn.setImage(UIImage(named: "share"), for: UIControl.State.normal)
+        textField.borderStyle = UITextField.BorderStyle.roundedRect
+        textView.frame = CGRect(x: 0, y: 0, width: kWidth - shareBtnView.bounds.width - likeBtnView.bounds.width - 25, height: 30)
+        textField.frame = CGRect(x: 5, y: 0, width: kWidth - shareBtnView.bounds.width - likeBtnView.bounds.width - 35, height: 30)
+        
+        likeBtnView.addSubview(likeBtn)
+        shareBtnView.addSubview(shareBtn)
+        textView.addSubview(textField)
+        
+        let likeBarItem = UIBarButtonItem(customView: likeBtnView)
+        let shareBarItem = UIBarButtonItem(customView: shareBtnView)
+        let textBarItem = UIBarButtonItem(customView: textView)
+        let toolBarItems = [likeBarItem, textBarItem, shareBarItem]
+        ToolBar.setItems(toolBarItems, animated: true)
         
         let contentText = "Hello! Welcome to my new page!HAHAHAHAHAHAHAHAHAHAH\n<b>This is my home page!\n</b><img>http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg</img>\nI Love You All!\nLove You!\n<img>http://pic.rmb.bdstatic.com/f54083119edfb83c4cfe9ce2eeebc076.jpeg</img>\n<img>noData</img>\nGOOD!\n<img>http://img3.imgtn.bdimg.com/it/u=1656811409,1242727312&fm=26&gp=0.jpg</img>\n<img>wow</img>\n<img>http://upload.pig66.com/uploadfile/2017/0511/20170511080327163.jpg</img>"
         
@@ -53,7 +89,7 @@ class ArticleViewController: UIViewController {
         textHeight = strRec.height + 40
         label.attributedText = attributedContent
         label.frame = CGRect(x: 5, y: kNavBarHeight, width: UIScreen.main.bounds.width - 20, height: textHeight)
-        ScrollView.contentSize = CGSize(width: kWidth, height: textHeight + replyView.frame.height + kNavBarHeight + 105)
+        ScrollView.contentSize = CGSize(width: kWidth, height: textHeight + replyView.frame.height + kNavBarHeight + 105 + CGFloat(isXHeight))
         self.ScrollView.addSubview(label)
         self.ScrollView.addSubview(replyView)
         self.view.addSubview(ScrollView)
@@ -74,7 +110,7 @@ class ArticleViewController: UIViewController {
         
         let tabbarSpace: CGFloat = (self.tabBarController?.tabBar.frame.height)!
         
-        let contentView = UICollectionView.init(frame: CGRect.init(x: 0.0, y: kNavBarHeight + label.frame.height, width: kWidth, height: kHeight - kNavBarHeight - 40), collectionViewLayout: layout)
+        let contentView = UICollectionView.init(frame: CGRect.init(x: 0.0, y: kNavBarHeight + label.frame.height, width: kWidth, height: kHeight - kNavBarHeight - 40 - CGFloat(isXHeight)), collectionViewLayout: layout)
         contentView.dataSource = self
         contentView.delegate = self
         contentView.register(ReplyCell.self, forCellWithReuseIdentifier: "ReplyCell")
@@ -84,6 +120,11 @@ class ArticleViewController: UIViewController {
         
         return contentView
     }()
+    
+    @objc func clickCityTextfield(){
+        textField.resignFirstResponder()
+        popview.showInWindow()
+    }
     
     /*func getLabHeigh(labelStr:String,font:UIFont,width:CGFloat,lineSpacing:CGFloat = 0) -> CGFloat {
         let statusLabelText: NSString = labelStr as NSString
@@ -252,3 +293,11 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
         return false;
     }*/
 }
+
+extension ArticleViewController: UITextFieldDelegate{
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        self.clickCityTextfield()
+        return false
+    }
+}
+
