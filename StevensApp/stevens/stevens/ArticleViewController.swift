@@ -26,53 +26,61 @@ class ArticleViewController: UIViewController {
     
     lazy var ScrollView: UIScrollView = {
         let scroll = UIScrollView(frame: CGRect(x: 0, y: kNavBarHeight, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        scroll.contentSize = CGSize(width: scroll.bounds.width, height: scroll.bounds.height * 10)
+        scroll.contentSize = CGSize(width: scroll.frame.width, height: scroll.frame.height * 10)
         return scroll
     }()
+    
+    let content = "很棒"
+    var data: [String] = ["很棒"]
+    //var countReply = 0.0;
+    var textHeight = CGFloat(0)
+    
+    var ToolBar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: kHeight - 40, width: kWidth, height: 40))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for i in 1..<10 {
+            data.append(data[i - 1] + content)
+        }
+        
         self.view.backgroundColor = .white
-        //let htmlString = """
-                           // <html><head></head><body><h1>Hello World!</h1><img src="
-        //http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg
-        //" height="100" width="100"></img><p>Good!</p></body></html>
-                        //"""
-
-        //label.attributedText = htmlString.htmlToAttributedString;
         
         let contentText = "Hello! Welcome to my new page!HAHAHAHAHAHAHAHAHAHAH\n<b>This is my home page!\n</b><img>http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg</img>\nI Love You All!\nLove You!\n<img>http://pic.rmb.bdstatic.com/f54083119edfb83c4cfe9ce2eeebc076.jpeg</img>\n<img>noData</img>\nGOOD!\n<img>http://img3.imgtn.bdimg.com/it/u=1656811409,1242727312&fm=26&gp=0.jpg</img>\n<img>wow</img>\n<img>http://upload.pig66.com/uploadfile/2017/0511/20170511080327163.jpg</img>"
-        //label.frame = CGRect(x: 5, y: kNavBarHeight + 5, width: UIScreen.main.bounds.width - 10, height: getLabHeigh(labelStr: contentText, font: label.font, width: UIScreen.main.bounds.width))
-        //label.attributedText = NSMutableAttributedString(string: contentText)
+        
         let attributedContent = formatTransfer(labelStr: contentText)
         let strRec = attributedContent.boundingRect(with: CGSize(width: UIScreen.main.bounds.width - 20, height: CGFloat(MAXFLOAT)), options: [.usesFontLeading, .usesLineFragmentOrigin], context: nil)
-        let height = strRec.height + 20
+        textHeight = strRec.height + 40
         label.attributedText = attributedContent
-        label.frame = CGRect(x: 5, y: kNavBarHeight, width: UIScreen.main.bounds.width - 20, height: height)
-        ScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: height + replyView.bounds.height)
-        self.view.addSubview(ScrollView)
+        label.frame = CGRect(x: 5, y: kNavBarHeight, width: UIScreen.main.bounds.width - 20, height: textHeight)
+        ScrollView.contentSize = CGSize(width: kWidth, height: textHeight + replyView.frame.height + kNavBarHeight + 105)
         self.ScrollView.addSubview(label)
         self.ScrollView.addSubview(replyView)
+        self.view.addSubview(ScrollView)
+        self.view.addSubview(ToolBar)
+        //countReply = 0.0
+        //ScrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: height + replyView.frame.height)
         // Do any additional setup after loading the view.
     }
     
     lazy var replyView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout.init()
+        let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 5.0
         layout.minimumInteritemSpacing = 5.0
-        layout.itemSize = CGSize(width: kWidth, height: 180)
+        layout.estimatedItemSize = CGSize(width: kWidth, height: 180)
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize
         layout.headerReferenceSize = CGSize(width: kWidth, height: 40)
-        //layout.scrollDirection = .vertical
+        layout.sectionHeadersPinToVisibleBounds = true
         
         let tabbarSpace: CGFloat = (self.tabBarController?.tabBar.frame.height)!
         
-        let contentView = UICollectionView.init(frame: CGRect.init(x: 0.0, y: kNavBarHeight + label.frame.height, width: kWidth, height: kHeight - tabbarSpace - kBottomSpace), collectionViewLayout: layout)
+        let contentView = UICollectionView.init(frame: CGRect.init(x: 0.0, y: kNavBarHeight + label.frame.height, width: kWidth, height: kHeight - kNavBarHeight - 40), collectionViewLayout: layout)
         contentView.dataSource = self
         contentView.delegate = self
         contentView.register(ReplyCell.self, forCellWithReuseIdentifier: "ReplyCell")
         contentView.register(ReplyHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ReplyHeader")
         contentView.backgroundColor = UIColor.white
+        //contentView.isScrollEnabled = false
         
         return contentView
     }()
@@ -212,10 +220,6 @@ extension String {
 
 extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
-    func collectionView(_ replyView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
-    
     func numberOfSections(in replyView: UICollectionView) -> Int {
         
         return 1
@@ -223,12 +227,7 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ replyView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
-    }
-    
-    func collectionView(_ replyView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 0.0)
+        return 10
     }
     
     func collectionView(_ replyView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -240,13 +239,16 @@ extension ArticleViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ replyView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = replyView.dequeueReusableCell(withReuseIdentifier: "ReplyCell", for: indexPath) as! ReplyCell
-        //cell.backgroundColor = UIColor.randomColor
-        cell.userLabel.text = "User1"
-        cell.replyContent.text = "HAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHHAAH\nHAHAHAHAHAHAHAHAHAHHAHA\nHAHAHAHAHAHA"
+        let i = indexPath.item
+        cell.userLabel.text = "User" + String(i)
+        cell.replyContent.text = data[i]
+        let strRec = cell.replyContent.text.boundingRect(with: CGSize(width: cell.frame.width - 30, height: 1000000), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: cell.replyContent.font ?? UIFont.systemFont(ofSize: 15)], context: nil)
+        let height = strRec.height
+        cell.replyContent.frame.size.height = height + 30
         return cell
     }
     
-    func collectionView(_ contentView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    /*func collectionView(_ contentView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return false;
-    }
+    }*/
 }

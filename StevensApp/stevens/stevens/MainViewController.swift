@@ -12,6 +12,7 @@ var kReadedNewsKey = "ReadNewsKey"
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var SearchBtn: UIBarButtonItem!
     var pageView: TLPageView!
     var titles : [String] = ["Recommend", "House Rental", "Car Trade", "Internship", "Popular Restaurant"]
     lazy var rightItem: UIButton = {
@@ -53,6 +54,12 @@ class ViewController: UIViewController {
         }
         pageView.moveTo(index: 0, animated: true)
 
+    }
+    
+    @IBAction func searchClick(sender: UIBarButtonItem) {
+        let vc = SearchView()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func btnClick() {

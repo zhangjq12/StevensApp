@@ -11,7 +11,7 @@ import UIKit
 class NewsCell: UICollectionViewCell {
 
     lazy var label: UILabel = {
-        let label = UILabel(frame: CGRect(x: 20, y: 0, width: frame.width - 105, height: 100))
+        let label = UILabel(frame: CGRect(x: 10, y: 0, width: frame.width - 105, height: 60))
         label.numberOfLines = 2
         label.lineBreakMode = .byWordWrapping
         return label
@@ -27,8 +27,18 @@ class NewsCell: UICollectionViewCell {
         
         image.downloadedFrom(imageurl: "http://img5.duitang.com/uploads/item/201209/10/20120910111702_CNPJj.thumb.700_0.jpeg")
         self.addSubview(label)
+        self.addSubview(self.bottomLine);
+        self.bottomLine.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalTo(self)
+            make.height.equalTo(1);
+        }
     }
 
+    fileprivate  lazy  var bottomLine:UIView = {
+        let line = UIView()
+        line.backgroundColor = .lightGray;
+        return line;
+    }()
 }
 extension UIImageView{
     func downloadedFrom(imageurl : String){
