@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7560E4C422F8EA840059683A /* RecommendFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */; };
 		988A321422F0429100959DA3 /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321322F0429100959DA3 /* ReplyCell.swift */; };
 		988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */; };
 		988A321822F065A700959DA3 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321722F065A700959DA3 /* MyInfoView.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFilterViewController.swift; sourceTree = "<group>"; };
 		988A321322F0429100959DA3 /* ReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
 		988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderCell.swift; sourceTree = "<group>"; };
 		988A321722F065A700959DA3 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				98D669D622DAC8C9004E3BA2 /* TLPageView */,
 				98D669A222B4C866004E3BA2 /* AppDelegate.swift */,
 				98D669A622B4C866004E3BA2 /* Main.storyboard */,
+				7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */,
 				988A321722F065A700959DA3 /* MyInfoView.swift */,
 				988A321B22F1465400959DA3 /* AppSettingsView.swift */,
 				988A321D22F1466800959DA3 /* MessageView.swift */,
@@ -509,6 +512,7 @@
 				988A321422F0429100959DA3 /* ReplyCell.swift in Sources */,
 				988A325122F1715100959DA3 /* ConstraintAttributes.swift in Sources */,
 				988A325922F1715100959DA3 /* ConstraintInsetTarget.swift in Sources */,
+				7560E4C422F8EA840059683A /* RecommendFilterViewController.swift in Sources */,
 				988A325D22F1715100959DA3 /* ConstraintView.swift in Sources */,
 				98D669DF22DAC8C9004E3BA2 /* TLMenuView.swift in Sources */,
 				988A326822F1715100959DA3 /* ConstraintItem.swift in Sources */,
