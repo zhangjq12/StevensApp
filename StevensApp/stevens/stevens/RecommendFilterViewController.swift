@@ -4,6 +4,7 @@
 //
 //  Created by Shuhao Bai on 8/5/19.
 //  Copyright © 2019 JqZhang. All rights reserved.
+//  code参考：https://www.youtube.com/watch?v=22zu-OTS-3M
 //
 
 import UIKit
@@ -19,6 +20,8 @@ class RecommendFilterViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(button)
+        //view.addSubview(button)
+        
         
         button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
