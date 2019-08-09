@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7560E4C422F8EA840059683A /* RecommendFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */; };
+		75643D3822FD0457000D50F8 /* HouseRentalFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */; };
+		75643D3A22FD04BB000D50F8 /* CarTradeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */; };
 		988A321422F0429100959DA3 /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321322F0429100959DA3 /* ReplyCell.swift */; };
 		988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */; };
 		988A321822F065A700959DA3 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321722F065A700959DA3 /* MyInfoView.swift */; };
@@ -96,6 +98,8 @@
 
 /* Begin PBXFileReference section */
 		7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFilterViewController.swift; sourceTree = "<group>"; };
+		75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseRentalFilterViewController.swift; sourceTree = "<group>"; };
+		75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTradeFilterViewController.swift; sourceTree = "<group>"; };
 		988A321322F0429100959DA3 /* ReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
 		988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderCell.swift; sourceTree = "<group>"; };
 		988A321722F065A700959DA3 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				98D669A222B4C866004E3BA2 /* AppDelegate.swift */,
 				98D669A622B4C866004E3BA2 /* Main.storyboard */,
 				7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */,
+				75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */,
+				75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */,
 				988A321722F065A700959DA3 /* MyInfoView.swift */,
 				988A321B22F1465400959DA3 /* AppSettingsView.swift */,
 				988A321D22F1466800959DA3 /* MessageView.swift */,
@@ -536,9 +542,11 @@
 				98D669E622DACDE5004E3BA2 /* FourmController.swift in Sources */,
 				988A321E22F1466800959DA3 /* MessageView.swift in Sources */,
 				98D669D322D6EFC9004E3BA2 /* MainViewController.swift in Sources */,
+				75643D3A22FD04BB000D50F8 /* CarTradeFilterViewController.swift in Sources */,
 				988A321C22F1465400959DA3 /* AppSettingsView.swift in Sources */,
 				988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */,
 				98D669F122DB0330004E3BA2 /* ArticleViewController.swift in Sources */,
+				75643D3822FD0457000D50F8 /* HouseRentalFilterViewController.swift in Sources */,
 				988A325F22F1715100959DA3 /* ConstraintLayoutSupport.swift in Sources */,
 				988A326122F1715100959DA3 /* ConstraintConstantTarget.swift in Sources */,
 				988A326D22F1715100959DA3 /* LayoutConstraint.swift in Sources */,
