@@ -10,6 +10,7 @@
 		7560E4C422F8EA840059683A /* RecommendFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */; };
 		75643D3822FD0457000D50F8 /* HouseRentalFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */; };
 		75643D3A22FD04BB000D50F8 /* CarTradeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */; };
+		75CDC1C622FF772800CCDB7C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDC1C522FF772800CCDB7C /* CategoryViewController.swift */; };
 		988A321422F0429100959DA3 /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321322F0429100959DA3 /* ReplyCell.swift */; };
 		988A321622F04D6500959DA3 /* ReplyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */; };
 		988A321822F065A700959DA3 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A321722F065A700959DA3 /* MyInfoView.swift */; };
@@ -100,6 +101,7 @@
 		7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFilterViewController.swift; sourceTree = "<group>"; };
 		75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseRentalFilterViewController.swift; sourceTree = "<group>"; };
 		75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTradeFilterViewController.swift; sourceTree = "<group>"; };
+		75CDC1C522FF772800CCDB7C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		988A321322F0429100959DA3 /* ReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
 		988A321522F04D6500959DA3 /* ReplyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyHeaderCell.swift; sourceTree = "<group>"; };
 		988A321722F065A700959DA3 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				98D669D622DAC8C9004E3BA2 /* TLPageView */,
 				98D669A222B4C866004E3BA2 /* AppDelegate.swift */,
 				98D669A622B4C866004E3BA2 /* Main.storyboard */,
+				75CDC1C522FF772800CCDB7C /* CategoryViewController.swift */,
 				7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */,
 				75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */,
 				75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */,
@@ -550,6 +553,7 @@
 				988A325F22F1715100959DA3 /* ConstraintLayoutSupport.swift in Sources */,
 				988A326122F1715100959DA3 /* ConstraintConstantTarget.swift in Sources */,
 				988A326D22F1715100959DA3 /* LayoutConstraint.swift in Sources */,
+				75CDC1C622FF772800CCDB7C /* CategoryViewController.swift in Sources */,
 				988A325C22F1715100959DA3 /* UILayoutSupport+Extensions.swift in Sources */,
 				98D669E122DAC8C9004E3BA2 /* TLPageViewConfiguration.swift in Sources */,
 				988A326322F1715100959DA3 /* ConstraintMakerEditable.swift in Sources */,
