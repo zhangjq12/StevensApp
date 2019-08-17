@@ -9,6 +9,17 @@
 
 import UIKit
 
+// MARK: - IBActions
+// https://www.raywenderlich.com/462-storyboards-tutorial-for-ios-part-2
+extension CategoryViewController {
+    
+    @IBAction func cancelRecommendFilterViewController(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveRecommendFilter(_ segue: UIStoryboardSegue) {
+    }
+}
+
 /* ==== 这一大块代码是drop-down menu
 class RecommendFilterViewController: UIViewController {
 

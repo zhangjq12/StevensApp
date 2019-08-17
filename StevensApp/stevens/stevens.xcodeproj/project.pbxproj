@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		754B37E92307BADD00A67E79 /* RestaurantFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B37E82307BADD00A67E79 /* RestaurantFilterViewController.swift */; };
+		754B37EB2307BB4A00A67E79 /* OthersFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B37EA2307BB4A00A67E79 /* OthersFilterViewController.swift */; };
+		754B37ED2307BB9F00A67E79 /* JobsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B37EC2307BB9F00A67E79 /* JobsFilterViewController.swift */; };
 		7560E4C422F8EA840059683A /* RecommendFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */; };
 		75643D3822FD0457000D50F8 /* HouseRentalFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */; };
 		75643D3A22FD04BB000D50F8 /* CarTradeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */; };
@@ -98,6 +101,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		754B37E82307BADD00A67E79 /* RestaurantFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFilterViewController.swift; sourceTree = "<group>"; };
+		754B37EA2307BB4A00A67E79 /* OthersFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersFilterViewController.swift; sourceTree = "<group>"; };
+		754B37EC2307BB9F00A67E79 /* JobsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsFilterViewController.swift; sourceTree = "<group>"; };
 		7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFilterViewController.swift; sourceTree = "<group>"; };
 		75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseRentalFilterViewController.swift; sourceTree = "<group>"; };
 		75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTradeFilterViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +304,9 @@
 				75643D3722FD0457000D50F8 /* HouseRentalFilterViewController.swift */,
 				7560E4C322F8EA840059683A /* RecommendFilterViewController.swift */,
 				75643D3922FD04BB000D50F8 /* CarTradeFilterViewController.swift */,
+				754B37E82307BADD00A67E79 /* RestaurantFilterViewController.swift */,
+				754B37EA2307BB4A00A67E79 /* OthersFilterViewController.swift */,
+				754B37EC2307BB9F00A67E79 /* JobsFilterViewController.swift */,
 				988A321722F065A700959DA3 /* MyInfoView.swift */,
 				988A321B22F1465400959DA3 /* AppSettingsView.swift */,
 				988A321D22F1466800959DA3 /* MessageView.swift */,
@@ -521,6 +530,7 @@
 				988A321422F0429100959DA3 /* ReplyCell.swift in Sources */,
 				988A325122F1715100959DA3 /* ConstraintAttributes.swift in Sources */,
 				988A325922F1715100959DA3 /* ConstraintInsetTarget.swift in Sources */,
+				754B37ED2307BB9F00A67E79 /* JobsFilterViewController.swift in Sources */,
 				7560E4C422F8EA840059683A /* RecommendFilterViewController.swift in Sources */,
 				988A325D22F1715100959DA3 /* ConstraintView.swift in Sources */,
 				98D669DF22DAC8C9004E3BA2 /* TLMenuView.swift in Sources */,
@@ -537,6 +547,7 @@
 				988A322022F14EF400959DA3 /* SearchView.swift in Sources */,
 				988A324E22F1715100959DA3 /* LayoutConstraintItem.swift in Sources */,
 				988A324F22F1715100959DA3 /* ConstraintDescription.swift in Sources */,
+				754B37E92307BADD00A67E79 /* RestaurantFilterViewController.swift in Sources */,
 				988A324D22F1715100959DA3 /* ConstraintMultiplierTarget.swift in Sources */,
 				988A326B22F1715100959DA3 /* ConstraintRelatableTarget.swift in Sources */,
 				98D669EC22DB009B004E3BA2 /* UIScrollView+Ext.swift in Sources */,
@@ -554,6 +565,7 @@
 				988A326122F1715100959DA3 /* ConstraintConstantTarget.swift in Sources */,
 				988A326D22F1715100959DA3 /* LayoutConstraint.swift in Sources */,
 				75CDC1C622FF772800CCDB7C /* CategoryViewController.swift in Sources */,
+				754B37EB2307BB4A00A67E79 /* OthersFilterViewController.swift in Sources */,
 				988A325C22F1715100959DA3 /* UILayoutSupport+Extensions.swift in Sources */,
 				98D669E122DAC8C9004E3BA2 /* TLPageViewConfiguration.swift in Sources */,
 				988A326322F1715100959DA3 /* ConstraintMakerEditable.swift in Sources */,

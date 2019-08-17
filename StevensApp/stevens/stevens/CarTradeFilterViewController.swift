@@ -8,6 +8,17 @@
 
 import UIKit
 
+// MARK: - IBActions
+// https://www.raywenderlich.com/462-storyboards-tutorial-for-ios-part-2
+extension CategoryViewController {
+    
+    @IBAction func cancelCarTradeFilterViewController(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveCarTradeFilter(_ segue: UIStoryboardSegue) {
+    }
+}
+
 class CarTradeFilterViewController: UIViewController {
 
     override func viewDidLoad() {

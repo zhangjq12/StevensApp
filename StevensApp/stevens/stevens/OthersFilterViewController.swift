@@ -1,8 +1,8 @@
 //
-//  HouseRentalFilterViewController.swift
+//  OthersFilterViewController.swift
 //  stevens
 //
-//  Created by Shuhao Bai on 8/8/19.
+//  Created by Shuhao Bai on 8/17/19.
 //  Copyright © 2019 JqZhang. All rights reserved.
 //
 
@@ -12,18 +12,15 @@ import UIKit
 // https://www.raywenderlich.com/462-storyboards-tutorial-for-ios-part-2
 extension CategoryViewController {
     
-    @IBAction func cancelHouseRentalFilterViewController(_ segue: UIStoryboardSegue) {
+    @IBAction func cancelOthersFilterViewController(_ segue: UIStoryboardSegue) {
     }
     
-    @IBAction func saveRentalHouseFilter(_ segue: UIStoryboardSegue) {
+    @IBAction func saveOthersFilter(_ segue: UIStoryboardSegue) {
     }
 }
 
-class HouseRentalFilterViewController: UIViewController {
-    
-    
+class OthersFilterViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
