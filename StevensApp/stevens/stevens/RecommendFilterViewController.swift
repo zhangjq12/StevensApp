@@ -11,16 +11,83 @@ import UIKit
 
 // MARK: - IBActions
 // https://www.raywenderlich.com/462-storyboards-tutorial-for-ios-part-2
-extension CategoryViewController {
+
+// https://www.youtube.com/watch?v=Ps8bmxYdIVI
+
+/*
+class RecommendFilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tblDropDown: UITableView!
+    @IBOutlet weak var tblDropDownHC: NSLayoutConstraint!
+    var btnFilterSelection = UIButton?()
     
-    @IBAction func cancelRecommendFilterViewController(_ segue: UIStoryboardSegue) {
+    var isTableVisible = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tblDropDown.delegate = self
+        tblDropDown.dataSource = self
+        tblDropDownHC.constant = 0
     }
     
-    @IBAction func saveRecommendFilter(_ segue: UIStoryboardSegue) {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //MARK:- UITableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "filter")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "filter")
+        }
+        cell?.textLabel?.text = "\(indexPath.row + 1) rooms"
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        btnFilterSelection.setTitle("Recommend Filter: \(indexPath.row + 1)", for: .normal)
+        
+        UIView.animate(withDuration: 0.5) {
+            self.tblDropDownHC.constant = 0
+            self.isTableVisible = false
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    @IBAction func selectFilter(_ sender : AnyObject) {
+        
+        UIView.animate(withDuration: 0.5){
+            if self.isTableVisible == false {
+                self.isTableVisible = true
+                self.tblDropDownHC.constant = 44.0 * 3.0
+            } else {
+                self.tblDropDownHC.constant = 0
+                self.isTableVisible = false
+            }
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
-/* ==== 这一大块代码是drop-down menu
+*/
+
+//==== 这一大块代码是drop-down menu
+extension CategoryViewController {
+ 
+ @IBAction func cancelRecommendFilterViewController(_ segue: UIStoryboardSegue) {
+ }
+ 
+ @IBAction func saveRecommendFilter(_ segue: UIStoryboardSegue) {
+ }
+}
+ 
 class RecommendFilterViewController: UIViewController {
 
     var button = dropDownBtn()
@@ -187,6 +254,6 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
 
 }
-*/
+
 
 
